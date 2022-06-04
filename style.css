@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 
+/* overall default style for all tags*/
 *{
     margin: 0;
     padding: 0;
@@ -8,10 +9,12 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+/* set webpage background color */
 body {
     background: linear-gradient(to right, #3525af, #9153c9);
 }
 
+/* resume container styling */
 .resume {
     width: 800px;
     background: #fff;
@@ -19,6 +22,7 @@ body {
     display: flex;
 }
 
+/* split left and right side of the resume (left vs. right containers) */
 .left {
     background: #292b2f;
     width: 250px;
@@ -29,20 +33,24 @@ body {
     width: calc(100% - 250px);
 }
 
+/* center and add padding to the img_holder container */
 .left .img_holder {
     text-align: center;
     padding: 20px 0;
 }
 
+/* set width and border-radius for the image itself */
 .left .img_holder img {
     width: 200px;
     border-radius: 30px; 
 }
 
+/* add padding to the bottom of containers with this class selector */
 .pb {
     padding-bottom: 20px;
 }
 
+/* style title of each section */
 .title {
     font-size: 24px;
     font-weight: 700;
@@ -115,10 +123,131 @@ body {
     height: 100px;
     margin-bottom: 15px;
     border-radius: 15px;
-    background: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.skills .li_wrap {
+    background: #fff;
+}
+
+.skills .li_wrap .text,
+.interests .li_wrap .text,
+.hobbies .li_wrap .text {
+    margin-top: 5px;
+}
+
+.interests .li_wrap,
+.hobbies .li_wrap {
+    border: 2px solid #fff;
+}
+
+.interests .li_wrap .icon,
+.interests .li_wrap .text,
+.hobbies .li_wrap .icon,
+.hobbies .li_wrap .text {
+    color: #fff;
+}
+
+.interests .li_wrap:hover,
+.hobbies .li_wrap:hover {
+    background: #fff;
+}
+
+/*  */
+.interests .li_wrap:hover .icon,
+.interests .li_wrap:hover .text,
+.hobbies .li_wrap:hover .icon,
+.hobbies .li_wrap:hover .text {
+    color: #9153c9;
+}
+
+.header {
+    background: #292b2f;
+    padding: 15px 30px;
+    color: #fff;
+    height: 240px;
+}
+
+.header .name {
+    font-size: 52px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #3525af;
+}
+
+.header .role {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.header .about {
+    margin-top: 20px;
+    line-height: 26px;
+}
+
+.right_inner {
+    padding: 30px;
+    color: #292b2f;
+}
+
+/* add 30px of margin on top of 'education' title */
+.right_inner .education {
+    margin-top: 30px;
+}
+
+.right_inner .li_wrap {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.right_inner .li_wrap .date{
+    width: 125px;
+    color: #9153c9;
+}
+
+.right_inner .li_wrap .info {
+    width: calc(100% - 125px);
+    padding-left: 25px;
+    position: relative;
+}
+
+.right_inner .li_wrap .info_title {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #9153c9;
+}
+
+.right_inner .li_wrap .info_com {
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.right_inner .li_wrap .info_cont {
+    margin-top: 15px;
+}
+
+.right_inner .li_wrap .info:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: #9153c9;
+    border-radius: 50%;
+}
+
+.right_inner .li_wrap .info:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 4px;
+    width: 2px;
+    height: 90%;
+    background: #9153c9;
+}
